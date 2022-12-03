@@ -1,5 +1,10 @@
+import fs from 'fs';
+
 const rename = async () => {
-    // Write your code here 
+  fs.rename('properFilename', 'wrongFilename.txt', function (err) {
+    if (err) throw err;
+    console.log('File Renamed.');
+  });
 };
 
 await rename();
